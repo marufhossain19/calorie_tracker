@@ -7,8 +7,7 @@ import 'core/theme/app_theme.dart';
 import 'core/theme/theme_controller.dart';
 import 'presentation/controllers/calorie_tracker_controller.dart';
 import 'presentation/controllers/user_controller.dart';
-import 'presentation/screens/main_navigation_screen.dart';
-import 'presentation/screens/onboarding/get_started_screen.dart';
+import 'presentation/screens/splash/splash_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -50,26 +49,10 @@ class CalorieTrackerApp extends StatelessWidget {
             theme: AppTheme.lightTheme,
             darkTheme: AppTheme.darkTheme,
             themeMode: themeController.themeMode,
-            home: const _AppRootDecider(),
+            home: const SplashScreen(),
           );
         },
       ),
-    );
-  }
-}
-
-class _AppRootDecider extends StatelessWidget {
-  const _AppRootDecider();
-
-  @override
-  Widget build(BuildContext context) {
-    return Consumer<UserController>(
-      builder: (context, userController, _) {
-        if (!userController.isOnboarded) {
-          return const GetStartedScreen();
-        }
-        return const MainNavigationScreen();
-      },
     );
   }
 }

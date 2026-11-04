@@ -2,7 +2,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../core/constants/app_colors.dart';
-import '../../../core/utils/date_formatter.dart';
 import '../../../domain/entities/food_item_entity.dart';
 import '../../controllers/calorie_tracker_controller.dart';
 import '../../controllers/user_controller.dart';
@@ -291,20 +290,6 @@ class _FoodDetailScreenState extends State<FoodDetailScreen> {
                               fontSize: 12,
                               fontWeight: FontWeight.w700,
                               color: textPrimary,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 10),
-                            child: Text('|', style: TextStyle(color: cardBorder, fontSize: 13)),
-                          ),
-                          Icon(Icons.access_time_rounded, size: 15, color: textSecondary),
-                          const SizedBox(width: 4),
-                          Text(
-                            DateFormatter.formatTime(widget.item.time),
-                            style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                              color: textSecondary,
                             ),
                           ),
                           Padding(

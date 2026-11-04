@@ -12,8 +12,7 @@ import '../../widgets/calorie_gauge_widget.dart';
 import '../../widgets/food_thumbnail_widget.dart';
 import '../../widgets/intake_food_sheet.dart';
 import '../food/food_detail_screen.dart';
-import '../food/food_screen.dart';
-import '../main_navigation_screen.dart';
+import 'today_meals_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -289,14 +288,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      final mainNav = context.findAncestorStateOfType<MainNavigationScreenState>();
-                      if (mainNav != null) {
-                        mainNav.setIndex(1);
-                      } else {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(builder: (_) => const FoodScreen()),
-                        );
-                      }
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) => const TodayMealsScreen()),
+                      );
                     },
                     borderRadius: BorderRadius.circular(8),
                     child: Padding(
