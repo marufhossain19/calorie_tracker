@@ -15,9 +15,9 @@ A production-grade, beautifully crafted Flutter mobile application designed for 
 
 > **Test and explore CalTrack directly on your Android device:**
 > 
-> 📦 **[Download CalTrack APK (Google Drive Link) 📥](YOUR_GOOGLE_DRIVE_LINK_HERE)**
+> 📦 **[Download CalTrack APK (Google Drive) 📥](https://drive.google.com/file/d/1CTlysVBtJ-d1_uWn3W7nv3-7CB3WxmBm/view?usp=sharing)**
 > 
-> *(Replace `YOUR_GOOGLE_DRIVE_LINK_HERE` with your actual Google Drive download URL)*
+> Direct release build ready for immediate installation on Android devices.
 
 ---
 
